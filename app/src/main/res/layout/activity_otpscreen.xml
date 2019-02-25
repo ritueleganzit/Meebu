@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:layout_height="match_parent"
+    tools:context="com.meebu.SignInActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:id="@+id/linhead"
+
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="100dp"
+
+            android:layout_height="wrap_content"
+            android:src="@mipmap/meebu_white"
+            android:scaleType="centerInside"
+            />
+        <ImageView
+            android:layout_width="100dp"
+
+            android:layout_height="wrap_content"
+            android:src="@mipmap/imgpsh"
+            android:scaleType="centerInside"
+            />
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/linhead"
+        android:orientation="vertical"
+        android:id="@+id/lincontent"
+        android:gravity="center_horizontal"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.meebu.utils.RobotoBoldTextView
+
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter the 4 digit PIN"/>
+
+        <com.meebu.utils.RobotoRegularTextView
+
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+
+            android:textColor="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter PIN received via PHONE"/>
+
+
+
+
+        <com.goodiebag.pinview.Pinview
+            android:id="@+id/pinview"
+            android:layout_marginTop="20dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:cursorVisible="false"
+            app:forceKeyboard="false"
+            app:inputType="number"
+            app:password="false"
+            app:pinBackground="@drawable/example_drawable"
+            app:pinHeight="50.0dip"
+            app:pinLength="4"
+            app:pinWidth="50.0dip" />
+
+        <com.meebu.utils.RobotoRegularTextView
+            android:id="@+id/timer"
+
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+            android:textColor="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0:0"/>
+
+        <com.meebu.utils.RobotoRegularTextView
+            android:id="@+id/hide"
+            android:visibility="gone"
+
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+
+            android:textColor="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resend OTP"/>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_above="@+id/terms"
+        android:id="@+id/linsignup"
+        android:background="@drawable/bt_background"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center|bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.meebu.utils.RobotoRegularTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="CONTINUE"
+
+
+            android:paddingBottom="3dp"
+            android:padding="10dp"
+
+            android:gravity="center"
+            android:textSize="@dimen/loginheading"
+            android:textColor="#fff"
+            />
+
+    </LinearLayout>
+    <com.meebu.utils.RobotoRegularTextView
+        android:gravity="center"
+        android:id="@+id/terms"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+
+        android:textColor="#ffffff"
+        android:textSize="@dimen/loginheading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="By Tapping continue, I agree meebu Terms of use"/>
+
+
+
+</RelativeLayout>

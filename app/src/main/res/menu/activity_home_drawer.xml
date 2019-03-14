@@ -3,36 +3,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
+    <group android:checkableBehavior="single"
+        android:id="@+id/grp1">
+
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@mipmap/ic_rating"
+            android:title="@string/feedback" />
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/grp2">
+
+        <item
+            android:id="@+id/nav_language"
+            android:icon="@mipmap/ic_language"
+            android:title="@string/language" />
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/grp3">
+<item
+            android:id="@+id/nav_notificationsetting"
+            android:icon="@mipmap/ic_notify"
+            android:title="@string/notificationsetting" />
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/grp4">
+        <item
+            android:id="@+id/nav_becomemeebupartner"
+            android:icon="@mipmap/ic_meebupartner"
+            android:title="@string/becomemeebupartner" />
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/grp5">
+        <item
+            android:id="@+id/nav_termsandcondition"
+            android:icon="@mipmap/ic_legacy"
+
+            android:title="@string/termsandcondition" />
+    </group>
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:id="@+id/nav_logout"
+            android:icon="@mipmap/ic_logout"
+            android:title="@string/logout" />
+
     </group>
 
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
-        </menu>
-    </item>
+
 
 </menu>

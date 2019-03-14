@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent"
+
+    tools:context="com.meebu.SignInActivity">
+
+
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:layout_alignParentTop="true"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/logo"
+                android:layout_marginTop="50dp"
+                android:layout_height="100dp"
+                android:src="@drawable/logo_white"
+                android:scaleType="fitCenter"
+                />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:scaleType="centerInside"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/wizard_third"/>
+
+
+            <LinearLayout
+
+                android:layout_marginLeft="25dp"
+                android:layout_marginBottom="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_above="@+id/lin1"
+                android:layout_below="@+id/logo"
+
+                android:orientation="vertical"
+                android:id="@+id/lincontent"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal|center_vertical"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+<com.meebu.utils.RobotoRegularTextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    android:text="@string/please_enter_details"
+    android:textColor="@android:color/white"
+    android:layout_gravity="center"
+    android:gravity="center"/>
+
+
+                <EditText
+                    android:background="@drawable/ed_background"
+                    android:layout_width="match_parent"
+                    android:textSize="@dimen/loginheading"
+                    android:layout_marginBottom="15dp"
+
+                    android:id="@+id/reg_first_name"
+                    android:drawableLeft="@mipmap/man_user"
+                    android:hint="Enter First Name"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#828282"
+                    android:textColorHint="#828282"
+                    android:layout_height="wrap_content" />
+
+
+                <EditText
+                    android:background="@drawable/ed_background"
+                    android:layout_width="match_parent"
+                    android:textSize="@dimen/loginheading"
+                    android:layout_marginBottom="15dp"
+
+                    android:drawableLeft="@mipmap/ic_email"
+                    android:hint="Enter Email Address"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#828282"
+                    android:textColorHint="#828282"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:background="@drawable/ed_background"
+                    android:layout_width="match_parent"
+                    android:textSize="@dimen/loginheading"
+                    android:layout_marginBottom="15dp"
+
+                    android:drawableLeft="@mipmap/lock"
+                    android:hint="Enter Password"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#828282"
+                    android:textColorHint="#828282"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:background="@drawable/ed_background"
+                    android:layout_width="match_parent"
+                    android:textSize="@dimen/loginheading"
+                    android:layout_marginBottom="15dp"
+
+                    android:drawableLeft="@mipmap/lock"
+                    android:hint="Enter Confirm Password"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#828282"
+                    android:textColorHint="#828282"
+                    android:layout_height="wrap_content" />
+
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/lin1"
+                    android:layout_alignParentBottom="true"
+
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center|bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <com.meebu.utils.RubikBoldButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CONTINUE"
+                        android:id="@+id/sp_continue"
+                        android:background="@drawable/bt_background"
+                        android:paddingBottom="3dp"
+
+                        android:gravity="center"
+                        android:textSize="@dimen/loginheading"
+                        android:textColor="#fff"
+                        />
+
+                    <com.meebu.utils.RobotoRegularTextView
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/loginheading"
+                        android:layout_marginTop="5dp"
+
+                        android:id="@+id/txt_signin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/alreadyaccount"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

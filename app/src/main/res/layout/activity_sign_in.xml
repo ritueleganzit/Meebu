@@ -3,128 +3,122 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/colorPrimary"
     android:layout_height="match_parent"
+
     tools:context="com.meebu.SignInActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:gravity="center"
-        android:id="@+id/linhead"
-
-        android:orientation="vertical"
-        android:layout_centerHorizontal="true"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:layout_width="150dp"
-
-            android:layout_height="wrap_content"
-            android:src="@mipmap/meebu_white"
-            android:scaleType="centerInside"
-            />
 
 
+   <LinearLayout
+       android:gravity="center_horizontal"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+       <ImageView
+           android:layout_width="100dp"
+           android:layout_centerHorizontal="true"
+           android:id="@+id/logo"
+           android:layout_marginTop="50dp"
+           android:layout_height="100dp"
+             android:src="@drawable/logo_white"
+           android:scaleType="fitCenter"
+           />
+
+
+       <LinearLayout
+
+           android:layout_marginLeft="25dp"
+           android:layout_marginBottom="25dp"
+           android:layout_marginRight="25dp"
+
+           android:orientation="vertical"
+           android:id="@+id/lincontent"
+           android:gravity="center_horizontal|center_vertical"
+
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
 
 
 
-    </LinearLayout>
+           <EditText
+               android:background="@drawable/ed_background"
+               android:layout_width="match_parent"
+               android:textSize="@dimen/loginheading"
+               android:layout_marginBottom="20dp"
+android:elevation="3dp"
+               android:id="@+id/fp_email"
+               android:drawableLeft="@mipmap/man_user"
+               android:hint="Email Address or Mobile Number"
+               android:inputType="textEmailAddress"
+               android:textColor="#828282"
+               android:textColorHint="#828282"
+               android:layout_height="wrap_content" />
 
-    <LinearLayout
-        android:layout_marginTop="60dp"
-        android:layout_below="@+id/linhead"
-        android:orientation="vertical"
-        android:id="@+id/lincontent"
-        android:gravity="center_horizontal"
+           <EditText
+               android:background="@drawable/ed_background"
+               android:layout_width="match_parent"
+               android:textSize="@dimen/loginheading"
+               android:layout_marginBottom="20dp"
+               android:elevation="3dp"
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <EditText
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/ed_background"
-            android:layout_width="match_parent"
-            android:textSize="@dimen/loginheading"
-            android:id="@+id/fp_email"
-            android:drawableLeft="@mipmap/man_user"
-            android:hint="Email Address or Mobile Number"
-            android:inputType="textEmailAddress"
-            android:textColor="#828282"
-            android:textColorHint="#828282"
-            android:layout_height="wrap_content" />
+               android:drawableLeft="@mipmap/lock"
+               android:hint="Password"
+               android:inputType="textEmailAddress"
+               android:textColor="#828282"
+               android:textColorHint="#828282"
+               android:layout_height="wrap_content" />
 
-        <EditText
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/ed_background"
-            android:layout_width="match_parent"
-            android:textSize="@dimen/loginheading"
-            android:drawableLeft="@mipmap/lock"
-            android:hint="Email your Password"
-            android:inputType="textEmailAddress"
-            android:textColor="#828282"
-            android:textColorHint="#828282"
-            android:layout_height="wrap_content" />
+              <com.meebu.utils.RubikBoldButton
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="SIGN IN"
+                   android:paddingBottom="3dp"
+                   android:background="@drawable/bt_background"
+                   android:hapticFeedbackEnabled="true"
+                   android:id="@+id/signin_btn"
+                   android:elevation="3dp"
 
-        <LinearLayout
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/bt_background"
-            android:layout_width="match_parent"
-            android:id="@+id/fp_submit"
-            android:layout_marginBottom="15dp"
-            android:padding="10dp"
+                   android:gravity="center"
+                   android:textSize="@dimen/loginheading"
+                   android:textColor="#fff"
+                   />
+           <com.meebu.utils.RobotoBoldTextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/forgot"
+               android:id="@+id/forgot"
+               android:layout_marginTop="12dp"
+               android:textColor="@android:color/white"/>
 
-            android:textColor="#fff"
-            android:textStyle="bold"
-            android:textColorHint="#828282"
-            android:layout_height="wrap_content" >
 
-            <com.meebu.utils.RobotoRegularTextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="SIGN IN"
-                android:paddingBottom="3dp"
+           <LinearLayout
+               android:id="@+id/lin1"
+               android:layout_marginTop="20dp"
+               android:gravity="center|bottom"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+               <com.meebu.utils.RobotoRegularTextView
+                   android:gravity="center"
+                   android:textColor="#ffffff"
+                   android:textSize="@dimen/loginheading"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Don't have an account? "/>
+               <com.meebu.utils.RobotoRegularTextView
+                   android:gravity="center"
+                   android:textSize="@dimen/loginheading"
+                   android:id="@+id/signin"
+                   android:textColor="#ffffff"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/signup"/>
+           </LinearLayout>
+       </LinearLayout>
 
-                android:gravity="center"
-                android:textSize="@dimen/loginheading"
-                android:textColor="#fff"
-                />
-        </LinearLayout>
-        <com.meebu.utils.RobotoRegularTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Forgot Password ?"
-            android:textColor="@android:color/white"/>
-    </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/lin1"
-        android:layout_alignParentBottom="true"
-
-        android:layout_marginBottom="20dp"
-        android:gravity="center|bottom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <com.meebu.utils.RobotoRegularTextView
-            android:gravity="center"
-            android:textColor="#ffffff"
-            android:textSize="@dimen/loginheading"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Don't have an account?"/>
-        <com.meebu.utils.RobotoRegularTextView
-            android:gravity="center"
-            android:textSize="@dimen/loginheading"
-            android:id="@+id/signin"
-            android:textColor="#ffffff"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" Sign Up"/>
-    </LinearLayout>
+   </LinearLayout>
 
 
 </RelativeLayout>

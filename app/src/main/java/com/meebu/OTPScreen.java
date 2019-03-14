@@ -12,13 +12,23 @@ import com.meebu.utils.RobotoRegularTextView;
 public class OTPScreen extends AppCompatActivity {
 
     int time=30;
-    LinearLayout linsignup;
+    LinearLayout lincontinue;
     RobotoRegularTextView timer,hide;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otpscreen);
-        linsignup=findViewById(R.id.linsignup);
+        lincontinue=findViewById(R.id.lincontinue);
+
+        lincontinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(OTPScreen.this,SignupScreen.class));
+                overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+                finish();
+            }
+        });
+        /*linsignup=findViewById(R.id.linsignup);
         timer=findViewById(R.id.timer);
         hide=findViewById(R.id.hide);
         hide.setVisibility(View.GONE);
@@ -45,7 +55,7 @@ public class OTPScreen extends AppCompatActivity {
                 finish();
 
             }
-        });
+        });*/
     }
     public String checkDigit(int number) {
         return number <= 9 ? "0" + number : String.valueOf(number);

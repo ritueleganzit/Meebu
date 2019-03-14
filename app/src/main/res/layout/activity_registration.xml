@@ -97,7 +97,9 @@
                 android:layout_height="wrap_content"
                 android:hint="Mobile Number"
                 android:inputType="number"
-android:background="#ffff"
+
+
+android:background="@android:color/transparent"
                 android:padding="10dp"/>
         </LinearLayout>
 
@@ -115,12 +117,13 @@ android:background="#ffff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <com.meebu.utils.RobotoRegularTextView
+        <com.meebu.utils.RobotoBoldTextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="CONTINUE"
+
             android:paddingBottom="3dp"
-            android:padding="10dp"
+            android:padding="15dp"
 
             android:gravity="center"
             android:textSize="@dimen/loginheading"

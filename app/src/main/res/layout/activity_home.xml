@@ -13,13 +13,39 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <android.support.design.widget.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+    <LinearLayout
+        android:background="@color/colorPrimary"
         android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_home"
-        app:menu="@menu/activity_home_drawer" />
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+        android:layout_weight="1"
+        app:elevation="@null"
+        android:elevation="@null"
+            android:layout_gravity="start"
+            app:itemTextColor="#ffffff"
+            android:layout_alignParentTop="true"
+
+            app:itemIconTint="#ffffff"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/nav_header_home"
+            app:menu="@menu/activity_home_drawer" />
+
+
+        <com.meebu.utils.RobotoBoldTextView
+            android:id="@+id/text_view1"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Version 0.0.1" />
+    </LinearLayout>
 
 </android.support.v4.widget.DrawerLayout>

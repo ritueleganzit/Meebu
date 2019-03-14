@@ -17,9 +17,9 @@ public class MainActivity extends AppCompatActivity {
 
                 try {
                     Thread.sleep(3000);
-                  startActivity(new Intent(MainActivity.this,SignInActivity.class));
+                  startActivity(new Intent(MainActivity.this,MobileSignUpActivity.class));
                   overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
-
+finish();
 
                 } catch (InterruptedException e) {
                     e.printStackTrace();

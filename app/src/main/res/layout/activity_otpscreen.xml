@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -60,24 +61,19 @@
                 android:layout_height="wrap_content"
                 android:text="+91 9825055150"/>
 
-            <com.goodiebag.pinview.Pinview
-                android:id="@+id/pinview"
-                android:layout_marginTop="20dp"
-                android:layout_width="fill_parent"
+            <me.philio.pinentry.PinEntryView
+                android:id="@+id/vr_code"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cursorVisible="false"
-                app:forceKeyboard="false"
-                app:inputType="number"
-                app:password="false"
-                app:pinBackground="@drawable/example_drawable"
-                app:pinHeight="50.0dip"
-                app:pinLength="4"
-                app:pinWidth="50.0dip" />
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                app:pinInputType="number"
+                app:mask=""
 
 
-
-
-
+                app:digitSpacing="15dp"
+                app:digitElevation="5dp"
+                app:digitBackground="@drawable/pin_bg"/>
 
             <com.meebu.utils.RobotoRegularTextView
                 android:layout_width="match_parent"
@@ -136,3 +132,4 @@
 
 
 </RelativeLayout>
+</layout>

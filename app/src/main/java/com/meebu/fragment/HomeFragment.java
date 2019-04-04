@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.meebu.HomeActivity;
 import com.meebu.R;
 import com.meebu.adapter.CardFragmentPagerAdapter;
 import com.meebu.adapter.CardPagerAdapter;
@@ -33,9 +34,9 @@ public class HomeFragment extends Fragment {
     private ShadowTransformer mCardShadowTransformer;
     private CardFragmentPagerAdapter mFragmentCardAdapter;
     private ShadowTransformer mFragmentCardShadowTransformer;
-NestedScrollView  scrollview;
+    NestedScrollView scrollview;
 
-    ArrayList<HomeData> arrayList=new ArrayList<>();
+
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -46,26 +47,27 @@ NestedScrollView  scrollview;
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View v=inflater.inflate(R.layout.fragment_home, container, false);
+        View v = inflater.inflate(R.layout.fragment_home, container, false);
         mViewPager = (ViewPager) v.findViewById(R.id.viewPager);
 
-        recycler=v.findViewById(R.id.recycler);
-        scrollview=v.findViewById(R.id.scrollview);
-        recycler.setLayoutManager(new GridLayoutManager(getActivity(),3));
+        recycler = v.findViewById(R.id.recycler);
+        scrollview = v.findViewById(R.id.scrollview);
+        recycler.setLayoutManager(new GridLayoutManager(getActivity(), 3));
 
+        HomeActivity.textTitle.setText("Home");
+        HomeData homeData1 = new HomeData("SEND PACKAGE", R.mipmap.ic_send_package);
+        HomeData homeData2 = new HomeData("MY ORDER", R.mipmap.ic_myorder);
+        HomeData homeData3 = new HomeData("MY PROFILE", R.mipmap.ic_my_profile);
+        HomeData homeData4 = new HomeData("MEEBU WALLET", R.mipmap.ic_wallet);
+        HomeData homeData5 = new HomeData("HISTORY", R.mipmap.ic_history);
+        HomeData homeData6 = new HomeData("SAVE ADDRESS", R.mipmap.ic_home);
+        HomeData homeData7 = new HomeData("CUSTOMER CARE", R.mipmap.ic_customer_care);
+        HomeData homeData8 = new HomeData("REWARDS", R.mipmap.ic_orange_reward);
+        HomeData homeData9 = new HomeData("INVITE A FRIEND", R.mipmap.ic_invite);
 
-        HomeData homeData1=new HomeData("SEND PACKAGE",R.mipmap.ic_send_package);
-        HomeData homeData2=new HomeData("MY ORDER",R.mipmap.ic_myorder);
-        HomeData homeData3=new HomeData("MY PROFILE",R.mipmap.ic_my_profile);
-        HomeData homeData4=new HomeData("MEEBU WALLET",R.mipmap.ic_wallet);
-        HomeData homeData5=new HomeData("HISTORY",R.mipmap.ic_history);
-        HomeData homeData6=new HomeData("SAVE ADDRESS",R.mipmap.ic_home);
-        HomeData homeData7=new HomeData("CUSTOMER CARE",R.mipmap.ic_customer_care);
-        HomeData homeData8=new HomeData("REWARDS",R.mipmap.ic_orange_reward);
-        HomeData homeData9=new HomeData("INVITE A FRIEND",R.mipmap.ic_invite);
+        scrollview.scrollTo(0, 0);
+        ArrayList<HomeData> arrayList = new ArrayList<>();
 
-
-scrollview.scrollTo(0,0);
         arrayList.add(homeData1);
         arrayList.add(homeData2);
         arrayList.add(homeData3);
@@ -86,7 +88,7 @@ scrollview.scrollTo(0,0);
 
         mCardShadowTransformer = new ShadowTransformer(mViewPager, mCardAdapter);
         mFragmentCardShadowTransformer = new ShadowTransformer(mViewPager, mFragmentCardAdapter);
-recycler.setAdapter(new MyRecycler(getActivity(),arrayList));
+        recycler.setAdapter(new MyRecycler(getActivity(), arrayList));
         mViewPager.setAdapter(mCardAdapter);
         mViewPager.setPageTransformer(false, mCardShadowTransformer);
         mViewPager.setOffscreenPageLimit(3);

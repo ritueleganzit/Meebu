@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/running_order_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        app:cardBackgroundColor="#ffffff"
+        app:cardCornerRadius="5dp"
+
+        app:cardElevation="2dp"
+
+        app:cardUseCompatPadding="true">
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="100dp">
+
+            <TableLayout
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/lin_profile"
+                android:paddingLeft="5dp"
+                >
+
+                <TableRow>
+
+                    <com.meebu.utils.RobotoRegularTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:text="Order#"
+                        android:textColor="@color/dark_blue_text" />
+
+                    <com.meebu.utils.SansSemiBoldTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:text=":000000000"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:textColor="@color/dark_blue_text" />
+
+
+                </TableRow>
+
+                <TableRow>
+
+                    <com.meebu.utils.RobotoRegularTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:text="To"
+
+                        android:textColor="@color/dark_blue_text" />
+
+                    <com.meebu.utils.SansSemiBoldTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:text=":Lorem Ipsum"
+
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:textColor="@color/dark_blue_text" />
+
+
+                </TableRow>
+
+                <TableRow>
+
+                    <com.meebu.utils.RobotoRegularTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="50"
+                        android:text="Date Placed"
+                        android:textColor="@color/dark_blue_text" />
+
+                    <com.meebu.utils.SansSemiBoldTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+
+                        android:text=":Feb 27, 2019"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:textColor="@color/dark_blue_text" />
+
+
+                </TableRow>
+
+                <TableRow>
+
+                    <com.meebu.utils.RobotoRegularTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:text="Delivery"
+
+                        android:textColor="@color/dark_blue_text" />
+
+                    <com.meebu.utils.SansSemiBoldTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="50"
+                        android:text=":Within 24 hrs"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:textColor="@color/dark_blue_text" />
+
+
+                </TableRow>
+
+            </TableLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/lin_arrow"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/picture"
+
+
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="0dp"
+                    android:src="@drawable/user_gray" />
+
+                <com.meebu.utils.RobotoBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem Ipsum"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+
+                    android:textColor="@color/dark_blue_text" />
+
+                <android.support.v7.widget.AppCompatRatingBar
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/content"
+                    android:layout_alignTop="@+id/user_name"
+                    android:layout_below="@+id/user_name"
+                    android:rating="3"
+                    android:theme="@style/RatingBar" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_arrow"
+                android:layout_width="16dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/text_color">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/right_arrow" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+</layout>

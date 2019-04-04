@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        app:cardBackgroundColor="#ffffff"
+        app:cardCornerRadius="5dp"
+
+        app:cardElevation="2dp"
+
+        app:cardUseCompatPadding="true">
+
+
+        <RelativeLayout
+android:gravity="center_vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp">
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/lin_sender"
+                android:layout_alignParentStart="true"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_tick"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@color/colorPrimaryDark" />
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/dark_blue_text"
+                    android:text="Sender Address " />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:id="@+id/lin_view"
+                android:layout_below="@+id/lin_sender"
+                android:layout_alignParentStart="true"
+                android:layout_width="10dp"
+                android:gravity="center_horizontal"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+android:background="@color/dark_blue_text"
+                    android:layout_width="1dp"
+
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/lin_sender"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+
+                android:id="@+id/lin_receiver"
+                android:layout_below="@+id/lin_view"
+                android:layout_alignParentStart="true"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@color/green" />
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/dark_blue_text"
+                    android:text="Receiver Address " />
+
+            </LinearLayout>
+            
+            <com.meebu.utils.RobotoRegularTextView
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/dark_blue_text"
+                android:layout_below="@+id/lin_receiver"
+                android:layout_width="wrap_content"
+                android:text="Package Content :"
+                android:layout_height="wrap_content" />
+
+
+
+
+            <LinearLayout
+                android:id="@+id/lin_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/lin_arrow"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/picture"
+
+
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="0dp"
+                    android:src="@mipmap/ic_delete" />
+
+                <com.meebu.utils.RobotoBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delete"
+
+                    android:textSize="10sp"
+
+                    android:textColor="@color/red" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_arrow"
+                android:layout_width="16dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/text_color">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/right_arrow" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+</layout>

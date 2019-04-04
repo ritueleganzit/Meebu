@@ -1,0 +1,344 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:focusableInTouchMode="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:scaleType="centerInside"
+
+                    android:src="@drawable/add" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_marginBottom="10dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.meebu.utils.RobotoRegularTextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Unit of Measure:"
+                        android:textColor="@color/text_color"></com.meebu.utils.RobotoRegularTextView>
+
+                    <RadioGroup
+
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:text="cm/kg"
+                            android:textColor="@color/text_color" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="inches/pounds"
+                            android:textColor="@color/text_color" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.meebu.utils.RobotoRegularTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:text="Length:"
+                        android:textColor="@color/text_color" />
+
+                    <com.meebu.utils.CustomEditTextNormal
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:inputType="number"
+                        android:textColor="@color/text_color" />
+
+                    <com.meebu.utils.RobotoRegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cm"
+                        android:textColor="@color/text_color"></com.meebu.utils.RobotoRegularTextView>
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.meebu.utils.RobotoRegularTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:text="Width:"
+                        android:textColor="@color/text_color" />
+
+                    <com.meebu.utils.CustomEditTextNormal
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:inputType="number"
+                        android:textColor="@color/text_color" />
+
+                    <com.meebu.utils.RobotoRegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cm"
+                        android:textColor="@color/text_color"></com.meebu.utils.RobotoRegularTextView>
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.meebu.utils.RobotoRegularTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:text="Height:"
+                        android:textColor="@color/text_color" />
+
+                    <com.meebu.utils.CustomEditTextNormal
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:inputType="number"
+                        android:textColor="@color/text_color" />
+
+                    <com.meebu.utils.RobotoRegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cm"
+                        android:textColor="@color/text_color"></com.meebu.utils.RobotoRegularTextView>
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.meebu.utils.RobotoRegularTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:text="Actual Weight:"
+                        android:textColor="@color/text_color" />
+
+                    <com.meebu.utils.CustomEditTextNormal
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:inputType="number"
+                        android:textColor="@color/text_color" />
+
+                    <com.meebu.utils.RobotoRegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cm"
+                        android:textColor="@color/text_color"></com.meebu.utils.RobotoRegularTextView>
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.meebu.utils.RobotoRegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CAR"
+                            android:textColor="@color/text_color" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/car" />
+
+                        <com.meebu.utils.RobotoRegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rs.200-250"
+                            android:textColor="@color/text_color" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.meebu.utils.RobotoRegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CAR"
+                            android:textColor="@color/text_color" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/motorbike" />
+
+                        <com.meebu.utils.RobotoRegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rs.200-250"
+                            android:textColor="@color/text_color" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.meebu.utils.RobotoRegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CAR"
+                            android:textColor="@color/text_color" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/aeroplane" />
+
+                        <com.meebu.utils.RobotoRegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rs.200-250"
+                            android:textColor="@color/text_color" />
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.meebu.utils.CustomEditTextNormal
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:hint="Apply Coupon"
+                        android:inputType="number"
+
+                        android:textColor="@color/text_color" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:gravity="end"
+                        android:orientation="vertical">
+
+                        <com.meebu.utils.RobotoRegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total AED:"
+                            android:textColor="@color/text_color" />
+
+                        <com.meebu.utils.RobotoRegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1245"
+                            android:textColor="@color/text_color">
+
+                        </com.meebu.utils.RobotoRegularTextView>
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Terms and Condition"
+                        android:textColor="@color/text_color"></CheckBox>
+
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+
+
+        <com.meebu.utils.RubikBoldButton
+            android:id="@+id/fp_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/bt_background"
+            android:elevation="3dp"
+            android:gravity="center"
+            android:hapticFeedbackEnabled="true"
+            android:padding="3dp"
+
+            android:text="CONFIRM ORDER"
+            android:textColor="#fff"
+            android:textSize="@dimen/loginheading" />
+
+
+    </LinearLayout>
+</ScrollView>

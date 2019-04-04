@@ -4,7 +4,7 @@
 
 
 
-    <dimen name="myFontSize">10sp</dimen>
+    <dimen name="myFontSize">12sp</dimen>
 
 
     <dimen name="height">50px</dimen>

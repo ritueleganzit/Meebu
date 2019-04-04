@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:background="@drawable/dialog_bg"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/card_trans"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:transitionName="simple_activity_transition"
+        android:background="@drawable/transparent_rounded_corner"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/image_foreground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/transparent_rounded_corner"
+            android:scaleType="centerCrop"
+            android:src="@drawable/coupon_bg_3_small" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/scratch_card"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/sourcesanspro_semibold"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

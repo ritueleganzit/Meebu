@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.goibibo.libs.views.ScratchScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_bg"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        tools:context=".RelativeLayoutScratchActivity">
+
+        <!--CardView added ony for round edges-->
+
+        <com.goibibo.libs.views.ScratchRelativeLayoutView
+            android:id="@+id/scratch_card"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            android:background="@android:color/white">
+
+            <include layout="@layout/lyt_hidden"/>
+
+        </com.goibibo.libs.views.ScratchRelativeLayoutView>
+
+        <nl.dionsegijn.konfetti.KonfettiView
+            android:id="@+id/viewKonfetti"
+            android:layout_width="300dp"
+            android:layout_centerInParent="true"
+            android:layout_height="300dp" />
+
+    </RelativeLayout>
+</com.goibibo.libs.views.ScratchScrollView>

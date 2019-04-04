@@ -1,0 +1,131 @@
+<layout >
+
+    <RelativeLayout
+        android:focusableInTouchMode="true"
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="20dp">
+
+            <com.meebu.utils.RobotoBoldTextView
+
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Add Money to wallet"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/dark_blue_text"
+                android:textStyle="bold" />
+
+            <com.meebu.utils.RobotoRegularTextView
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:text="Enter Your Amount"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@color/dark_blue_text" />
+
+            <EditText
+                android:background="@drawable/ed_bg_border"
+                android:gravity="top"
+                android:textSize="25sp"
+
+                android:inputType="number"
+
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:lines="3"
+                android:padding="5dp" />
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <com.meebu.utils.RobotoRegularTextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="+ 1000"
+                    android:paddingLeft="6dp"
+                    android:gravity="center"
+                    android:paddingRight="6dp"
+                    android:textColor="@color/dark_blue_text"
+                    android:paddingTop="3dp"
+                    android:layout_marginRight="8dp"
+                    android:paddingBottom="3dp"
+                    android:background="@drawable/ed_bg_border"/>
+
+
+
+                <com.meebu.utils.RobotoRegularTextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="+ 500"
+                    android:gravity="center"
+                    android:layout_marginRight="8dp"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:textColor="@color/dark_blue_text"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:background="@drawable/ed_bg_border"/>
+
+                <com.meebu.utils.RobotoRegularTextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="+ 100"
+                    android:paddingLeft="6dp"
+                    android:gravity="center"
+                    android:paddingRight="6dp"
+                    android:textColor="@color/dark_blue_text"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:background="@drawable/ed_bg_border"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:background="#e2e2e2"
+            android:id="@+id/view"
+            android:layout_below="@+id/content"
+            android:layout_height="1dp"
+            android:layout_width="match_parent" />
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/view"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <com.meebu.utils.RobotoRegularTextView
+                android:gravity="center"
+                android:id="@+id/cancel"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:padding="15dp"
+                android:text="Continue"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="#535353" />
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

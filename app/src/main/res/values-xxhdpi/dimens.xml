@@ -14,6 +14,6 @@
     <dimen name="banner">110dp</dimen>
     <dimen name="loginheading">14sp</dimen>
     <dimen name="syncstatustxt">12sp</dimen>
-    <dimen name="myFontSize">8sp</dimen>
+    <dimen name="myFontSize">13sp</dimen>
 
 </resources>

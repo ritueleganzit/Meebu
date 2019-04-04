@@ -1,5 +1,6 @@
 package com.meebu;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -8,10 +9,12 @@ import android.support.annotation.RequiresApi;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -23,18 +26,27 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.meebu.fragment.HomeFragment;
+import com.meebu.fragment.LanguageFragment;
+import com.meebu.fragment.NotificationSettingsFragment;
+import com.meebu.fragment.TermsFragment;
+import com.meebu.utils.SessionManager;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     ViewPager banner_slider;
+    SessionManager sessionManager;
     ArrayList<Integer> slider_image_list = new ArrayList<>();
     AppBarLayout mAppBarLayout;
+    String fullname;
+public static TextView textTitle;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -49,10 +61,15 @@ public class HomeActivity extends AppCompatActivity
 
         //window.setStatusBarColor(getColor(R.color.black));
         setContentView(R.layout.activity_home);
+        sessionManager=new SessionManager(HomeActivity.this);
+
+HashMap<String,String> hashMap=sessionManager.getUserDetails();
+fullname=hashMap.get(SessionManager.FULLNAME);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setElevation(0);
-
+        textTitle=findViewById(R.id.textTitle);
 
         HomeFragment  homeFragment=new HomeFragment();
         FragmentTransaction  fragmentTransaction=getSupportFragmentManager().beginTransaction();
@@ -114,6 +131,12 @@ public class HomeActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        View headerView = navigationView.getHeaderView(0);
+        TextView tvfullname=headerView.findViewById(R.id.fullname);
+        tvfullname.setText(""+fullname);
+
+
+
     }
 
     @Override
@@ -138,10 +161,38 @@ public class HomeActivity extends AppCompatActivity
             Toast.makeText(this, "feedback", Toast.LENGTH_SHORT).show();
             // Handle the camera action
         } else if (id == R.id.nav_language) {
+            getSupportFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            LanguageFragment languageFragment=new LanguageFragment();
+            FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.addToBackStack("HomeActivity");
+            fragmentTransaction.replace(R.id.container,languageFragment);
+            fragmentTransaction.commit();
 
-        } else if (id == R.id.nav_becomemeebupartner) {
 
-        } else if (id == R.id.nav_logout) {
+        }
+        else if (id == R.id.nav_notificationsetting) {
+            getSupportFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            NotificationSettingsFragment notificationSettingsFragment=new NotificationSettingsFragment();
+            FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.addToBackStack("HomeActivity");
+            fragmentTransaction.replace(R.id.container,notificationSettingsFragment);
+            fragmentTransaction.commit();
+
+        }
+        else if (id == R.id.nav_becomemeebupartner) {
+
+        }
+        else if (id == R.id.nav_termsandcondition) {
+            getSupportFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            TermsFragment termsFragment=new TermsFragment();
+            FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.addToBackStack("HomeActivity");
+            fragmentTransaction.replace(R.id.container,termsFragment);
+            fragmentTransaction.commit();
+
+
+        }else if (id == R.id.nav_logout) {
+            sessionManager.logoutUser();
 
 
         }

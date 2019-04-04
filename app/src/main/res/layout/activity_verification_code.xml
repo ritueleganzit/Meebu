@@ -7,6 +7,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:id="@+id/main"
         android:background="@color/colorPrimary"
 
         tools:context="com.meebu.SignInActivity">
@@ -73,19 +74,17 @@
                         android:textColorHint="#828282"
                         android:textSize="@dimen/loginheading" />
 
-                    <com.goodiebag.pinview.Pinview
-                        android:id="@+id/pinview"
-                        android:layout_marginTop="20dp"
-                        android:layout_width="fill_parent"
+                    <me.philio.pinentry.PinEntryView
+                        android:id="@+id/vr_code"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:cursorVisible="false"
-                        app:forceKeyboard="false"
-                        app:inputType="number"
-                        app:password="false"
-                        app:pinBackground="@drawable/example_drawable"
-                        app:pinHeight="50.0dip"
-                        app:pinLength="4"
-                        app:pinWidth="50.0dip" />
+                        android:layout_marginTop="20dp"
+                        android:layout_gravity="center"
+                        app:pinInputType="number"
+                        app:mask=""
+                        app:digitSpacing="10dp"
+                        app:digitElevation="5dp"
+                        app:digitBackground="@drawable/pin_bg"/>
 
 
                     <LinearLayout

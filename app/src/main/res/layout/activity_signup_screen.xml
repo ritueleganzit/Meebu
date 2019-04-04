@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
 
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -7,6 +8,7 @@
     android:layout_width="match_parent"
     android:background="@color/colorPrimary"
     android:layout_height="match_parent"
+    android:id="@+id/main"
 
     tools:context="com.meebu.SignInActivity">
 
@@ -20,7 +22,6 @@
 
 
         <LinearLayout
-            android:layout_gravity="center"
             android:gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -73,10 +74,10 @@
                     android:layout_width="match_parent"
                     android:textSize="@dimen/loginheading"
                     android:layout_marginBottom="15dp"
-
-                    android:id="@+id/reg_first_name"
+android:fontFamily="@font/sourcesanspro_regular"
+                    android:id="@+id/reg_fullname"
                     android:drawableLeft="@mipmap/man_user"
-                    android:hint="Enter First Name"
+                    android:hint="Enter Fullname"
                     android:inputType="textEmailAddress"
                     android:textColor="#828282"
                     android:textColorHint="#828282"
@@ -87,8 +88,9 @@
                     android:background="@drawable/ed_background"
                     android:layout_width="match_parent"
                     android:textSize="@dimen/loginheading"
+                    android:id="@+id/reg_ed_email"
                     android:layout_marginBottom="15dp"
-
+                    android:fontFamily="@font/sourcesanspro_regular"
                     android:drawableLeft="@mipmap/ic_email"
                     android:hint="Enter Email Address"
                     android:inputType="textEmailAddress"
@@ -101,10 +103,11 @@
                     android:layout_width="match_parent"
                     android:textSize="@dimen/loginheading"
                     android:layout_marginBottom="15dp"
-
+                    android:fontFamily="@font/sourcesanspro_regular"
                     android:drawableLeft="@mipmap/lock"
                     android:hint="Enter Password"
-                    android:inputType="textEmailAddress"
+                    android:id="@+id/reg_pass"
+                    android:inputType="textWebPassword"
                     android:textColor="#828282"
                     android:textColorHint="#828282"
                     android:layout_height="wrap_content" />
@@ -112,11 +115,12 @@
                     android:background="@drawable/ed_background"
                     android:layout_width="match_parent"
                     android:textSize="@dimen/loginheading"
+                    android:id="@+id/reg_cpass"
                     android:layout_marginBottom="15dp"
-
+                    android:fontFamily="@font/sourcesanspro_regular"
                     android:drawableLeft="@mipmap/lock"
                     android:hint="Enter Confirm Password"
-                    android:inputType="textEmailAddress"
+                    android:inputType="textWebPassword"
                     android:textColor="#828282"
                     android:textColorHint="#828282"
                     android:layout_height="wrap_content" />
@@ -173,3 +177,4 @@
 
 
 </RelativeLayout>
+</layout>

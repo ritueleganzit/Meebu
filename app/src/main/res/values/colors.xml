@@ -2,8 +2,15 @@
 <resources>
     <color name="colorPrimary">#555d70</color>
     <color name="colorPrimaryDark">#41485a</color>
-    <color name="colorAccent">#ffffff</color>
+    <color name="colorAccent">#66000000</color>
     <color name="black">#000</color>
     <color name="black_overlay">#66000000</color>
+    <color name="text_color">#66000000</color>
     <color name="gray">#d9d9d9</color>
+    <color name="duskYellow">#FFD700</color>
+    <color name="dark_blue_text">#252a4e</color>
+    <color name="red">#E11B1B</color>
+    <color name="green">#2a8f1b</color>
+    <color name="bg">#F7F7FE</color>
+    <color name="bg_card">#FEFEFE</color>
 </resources>

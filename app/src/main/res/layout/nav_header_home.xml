@@ -27,9 +27,11 @@
        android:layout_height="wrap_content"
        android:orientation="vertical">
 
-       <com.meebu.utils.RobotoBoldTextView
+       <TextView
            android:layout_width="match_parent"
            android:text="Name"
+           android:id="@+id/fullname"
+           android:fontFamily="@font/sourcesanspro_regular"
            android:textColor="#ffffff"
            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
            android:layout_height="wrap_content"

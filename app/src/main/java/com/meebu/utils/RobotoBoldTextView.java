@@ -23,6 +23,6 @@ public class RobotoBoldTextView extends AppCompatTextView {
 
     @Override
     public void setTypeface(Typeface tf) {
-        super.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/Rubik-Bold.ttf"));
+        super.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/source-sans-pro.bold.ttf"));
     }
 }

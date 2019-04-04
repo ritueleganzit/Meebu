@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    android:layout_height="match_parent"
+    tools:context="com.meebu.fragment.LanguageFragment">
+
+    <ListView
+        android:choiceMode="singleChoice"
+        android:listSelector="@color/gray"
+        android:hapticFeedbackEnabled="true"
+        android:layout_width="match_parent"
+        android:entries="@array/language"
+        android:divider="@color/text_color"
+        android:dividerHeight="1dp"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+
+
+
+</LinearLayout>

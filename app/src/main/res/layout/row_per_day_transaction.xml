@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout
+
+    android:background="@color/bg_card"
+
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+    android:id="@+id/img1"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"/>
+
+
+    <LinearLayout
+        android:id="@+id/linearcontent"
+        android:layout_width="match_parent"
+        android:padding="8dp"
+
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/img1">
+          <LinearLayout
+              android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+              <com.meebu.utils.RobotoBoldTextView
+                  android:layout_weight="1"
+                  android:textColor="@color/dark_blue_text"
+                  android:text="Paid for Order"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content" />
+              <com.meebu.utils.RobotoBoldTextView
+                  android:layout_weight="1"
+                  android:gravity="end"
+                  android:textColor="@color/dark_blue_text"
+                  android:text="-Rs.200"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.meebu.utils.RobotoRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="09:45 AM"/>
+            <com.meebu.utils.RobotoRegularTextView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Closing  Balance: Rs 500"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentTop="true"
+
+        android:background="#c7c7c7"/>
+</RelativeLayout>
+</layout>

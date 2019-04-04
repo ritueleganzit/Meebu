@@ -23,6 +23,6 @@ public class RobotoRegularTextView extends AppCompatTextView {
 
     @Override
     public void setTypeface(Typeface tf) {
-        super.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/TitilliumWeb-Regular.ttf"));
+        super.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/source-sans-pro.regular.ttf"));
     }
 }

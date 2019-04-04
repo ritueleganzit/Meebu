@@ -9,15 +9,6 @@
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
          TextureView, etc. -->
-    <TextView
-        android:id="@+id/fullscreen_content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:visibility="gone"
-        android:keepScreenOn="true"
-        android:textSize="50sp"
-        android:textStyle="bold" />
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
@@ -46,10 +37,17 @@
 
         </LinearLayout>-->
 
-        <com.google.android.gms.maps.MapView
-            android:id="@+id/mapView"
+        <com.meebu.MapWrapperLayout
+            android:id="@+id/map_relative_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent">
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/mapView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </com.meebu.MapWrapperLayout>
 
         <RelativeLayout
             android:id="@+id/overlay"
@@ -68,14 +66,12 @@
                 android:id="@+id/back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/ic_back"/>
+                android:src="@mipmap/ic_left_arrow_white"/>
 
             <EditText
                 android:id="@+id/ed_pickup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:focusable="false"
-                android:cursorVisible="false"
                 android:padding="8dp"
                 android:elevation="6dp"
                 android:textCursorDrawable="@null"

@@ -25,7 +25,7 @@ public class RubikBoldButton extends android.support.v7.widget.AppCompatButton {
 
     private void init() {
         if (!isInEditMode()) {
-            Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), "fonts/Rubik-Bold.ttf");
+            Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), "fonts/source-sans-pro.bold.ttf");
             setTypeface(typeface);
         }
     }

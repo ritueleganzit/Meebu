@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical"
+        tools:context="com.example.dell.newapp.Settings">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimaryDark"
+            android:contentInsetEnd="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetStart="0dp"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:src="@mipmap/ic_left_arrow_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:gravity="left"
+                    android:text="@string/history"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="#fff" />
+
+                <ImageView
+                    android:src="@mipmap/notification_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true" />
+
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:background="#fff"
+            android:fillViewport="true">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <LinearLayout
+                    android:id="@+id/linearmyprofile"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="#313131"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <RelativeLayout
+                        android:id="@+id/profile"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_below="@+id/toolbar"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:background="@drawable/user_gray">
+
+                        <ImageView
+                            android:id="@+id/profile_pic"
+
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:scaleType="centerInside"
+                            android:transitionName="simple_activity_transition"
+
+
+                            tools:ignore="UnusedAttribute" />
+
+
+                        <ImageView
+
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginRight="-10dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/ic_cam" />
+                    </RelativeLayout>
+
+                    <com.meebu.utils.RobotoRegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:text="Name"
+                        android:textColor="@android:color/white"/>
+                </LinearLayout>
+
+                <TableLayout
+                    android:id="@+id/table_layout"
+                    android:layout_below="@+id/linearmyprofile"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/lin_profile"
+                    android:padding="10dp"
+                    >
+
+                    <TableRow android:layout_marginBottom="5dp">
+
+                        <com.meebu.utils.RobotoRegularTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:text="Job ID"
+                            android:textSize="@dimen/myFontSize"
+
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textColor="@color/dark_blue_text" />
+
+                        <com.meebu.utils.SansSemiBoldTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:singleLine="true"
+                            android:textSize="@dimen/myFontSize"
+                            android:gravity="start"
+                            android:ellipsize="end"
+                            android:text="000000000"
+                            android:textColor="@color/dark_blue_text" />
+
+
+                    </TableRow>
+                    <TableRow android:layout_marginBottom="5dp">
+
+                        <com.meebu.utils.RobotoRegularTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:text="Receiver Name"
+                            android:textSize="@dimen/myFontSize"
+
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textColor="@color/dark_blue_text" />
+
+                        <com.meebu.utils.SansSemiBoldTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:singleLine="true"
+                            android:textSize="@dimen/myFontSize"
+                            android:gravity="start"
+                            android:ellipsize="end"
+                            android:text="Lorem Ipsum"
+                            android:textColor="@color/dark_blue_text" />
+
+
+                    </TableRow> <TableRow android:layout_marginBottom="5dp">
+
+                    <com.meebu.utils.RobotoRegularTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:text="Receiver Location"
+                        android:textSize="@dimen/myFontSize"
+
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:textColor="@color/dark_blue_text" />
+
+                    <com.meebu.utils.SansSemiBoldTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+
+                        android:textSize="@dimen/myFontSize"
+                        android:gravity="start"
+                        android:text="74 Victoria Road, LITTLE BEALINGS"
+                        android:textColor="@color/dark_blue_text" />
+
+
+                </TableRow>
+                    <TableRow android:layout_marginBottom="5dp">
+
+                        <com.meebu.utils.RobotoRegularTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:text="Receiver Date &amp; Time"
+                            android:textSize="@dimen/myFontSize"
+
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textColor="@color/dark_blue_text" />
+
+                        <com.meebu.utils.SansSemiBoldTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:singleLine="true"
+                            android:textSize="@dimen/myFontSize"
+                            android:gravity="start"
+                            android:ellipsize="end"
+                            android:text="19/02/2019 12:00 AM"
+                            android:textColor="@color/dark_blue_text" />
+
+
+                    </TableRow>
+
+                    <TableRow android:layout_marginBottom="5dp">
+
+                        <com.meebu.utils.RobotoRegularTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:text="Sender Location"
+                            android:textSize="@dimen/myFontSize"
+
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textColor="@color/dark_blue_text" />
+
+                        <com.meebu.utils.SansSemiBoldTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+
+                            android:textSize="@dimen/myFontSize"
+                            android:gravity="start"
+                            android:text="12 Victoria Road, LITTLE BEALINGS"
+                            android:textColor="@color/dark_blue_text" />
+
+
+                    </TableRow>
+                    <TableRow android:layout_marginBottom="5dp">
+
+                        <com.meebu.utils.RobotoRegularTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:text="Package Details"
+                            android:textSize="@dimen/myFontSize"
+
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textColor="@color/dark_blue_text" />
+
+                        <com.meebu.utils.SansSemiBoldTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:singleLine="true"
+                            android:textSize="@dimen/myFontSize"
+                            android:gravity="start"
+                            android:ellipsize="end"
+                            android:text="4 kg Box"
+                            android:textColor="@color/dark_blue_text" />
+
+
+                    </TableRow>
+                    <TableRow android:layout_marginBottom="5dp">
+
+                        <com.meebu.utils.RobotoRegularTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:text="Delivery Proof"
+                            android:textSize="@dimen/myFontSize"
+
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textColor="@color/dark_blue_text" />
+
+                        <com.meebu.utils.SansSemiBoldTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:singleLine="true"
+                            android:textSize="@dimen/myFontSize"
+                            android:gravity="start"
+                            android:ellipsize="end"
+                            android:text="Aadhar Card"
+                            android:textColor="@color/dark_blue_text" />
+
+
+                    </TableRow>
+                </TableLayout>
+
+                <com.meebu.utils.RobotoRegularTextView
+                    android:layout_below="@+id/table_layout"
+                    android:layout_width="match_parent"
+                    android:text="Payment Details"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:background="@color/gray"
+                    android:textColor="@color/dark_blue_text"
+                    android:id="@+id/payment"
+                    android:drawableLeft="@drawable/ic_action_name"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TableLayout
+                    android:layout_below="@+id/payment"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/lin_profile"
+                    android:padding="10dp"
+                    >
+
+                    <TableRow android:layout_marginBottom="5dp">
+
+                        <com.meebu.utils.RobotoRegularTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:text="Payment ID"
+                            android:textSize="@dimen/myFontSize"
+
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textColor="@color/dark_blue_text" />
+
+                        <com.meebu.utils.SansSemiBoldTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:singleLine="true"
+                            android:textSize="@dimen/myFontSize"
+                            android:gravity="start"
+                            android:ellipsize="end"
+                            android:text="000000000"
+                            android:textColor="@color/dark_blue_text" />
+
+
+                    </TableRow>
+                    <TableRow android:layout_marginBottom="5dp">
+
+                        <com.meebu.utils.RobotoRegularTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:text="Payment Method"
+                            android:textSize="@dimen/myFontSize"
+
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textColor="@color/dark_blue_text" />
+
+                        <com.meebu.utils.SansSemiBoldTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:singleLine="true"
+                            android:textSize="@dimen/myFontSize"
+                            android:gravity="start"
+                            android:ellipsize="end"
+                            android:text="Lorem Ipsum"
+                            android:textColor="@color/dark_blue_text" />
+
+
+                    </TableRow>
+                    <TableRow android:layout_marginBottom="5dp">
+
+                        <com.meebu.utils.RobotoRegularTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:text="Amount"
+                            android:textSize="@dimen/myFontSize"
+
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textColor="@color/dark_blue_text" />
+
+                        <com.meebu.utils.SansSemiBoldTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textSize="@dimen/myFontSize"
+                            android:gravity="start"
+                            android:text="AED 1250.50"
+                            android:textColor="@color/dark_blue_text" />
+
+
+                    </TableRow>
+                    <TableRow android:layout_marginBottom="5dp">
+
+                        <com.meebu.utils.RobotoRegularTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:text="Paid Stamp"
+                            android:textSize="@dimen/myFontSize"
+
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textColor="@color/dark_blue_text" />
+
+                        <com.meebu.utils.SansSemiBoldTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textSize="@dimen/myFontSize"
+                            android:gravity="start"
+                            android:text="Paid"
+                            android:textColor="@color/dark_blue_text" />
+
+
+                    </TableRow>
+
+                    <TableRow android:layout_marginBottom="5dp">
+
+                        <com.meebu.utils.RobotoRegularTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:text="Send copy to mail (auto)"
+                            android:textSize="@dimen/myFontSize"
+
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textColor="@color/dark_blue_text" />
+
+                        <com.meebu.utils.SansSemiBoldTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textSize="@dimen/myFontSize"
+                            android:gravity="start"
+                            android:text="xyz@gmail.com"
+                            android:textColor="@color/dark_blue_text" />
+
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+
+    </RelativeLayout>
+</layout>

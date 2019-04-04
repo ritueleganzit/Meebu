@@ -40,10 +40,11 @@
                         android:layout_alignParentLeft="true" />
                     <TextView
                         android:gravity="center"
-                        android:textColor="#000"
-                        android:text="My Cart"
-                        android:visibility="gone"
-                        android:textStyle="bold"
+                        android:textColor="#ffffff"
+                        android:text="Home"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:id="@+id/textTitle" />

@@ -11,7 +11,12 @@
     <string name="title_2">Ok card</string>
     <string name="title_3">Bad card</string>
     <string name="title_4">Ugly card</string>
-
+    <string name="history">History</string>
+    <string name="meebuwallet">Meebu Wallet</string>
+    <string-array name="language">
+        <item>Spanish</item>
+        <item>English</item>
+    </string-array>
     <string name="text_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Etiam eget ligula eu lectus lobortis condimentum.</string>
 
 
@@ -48,5 +53,187 @@
 
     <string name="please_enter_details">Please enter to finish with your profile details. </string>
     <string name="google_maps_key">AIzaSyD3t0-rMDn9zvQbzXqOEu1EUV9lssGSPjg</string>
+    <string name="myprofile">My Profile</string>
+    <string name="sendpackage">Send Package</string>
+    <string name="fullname">Full Name*</string>
+    <string name="mobilenumber">Mobile Number*</string>
+    <string name="country">Country*</string>
+    <string name="state">State*</string>
+    <string name="landmark">Landmark</string>
+    <string name="fulladdress">Full Address*</string>
+    <string name="receivername">Receiver Name</string>
+    <string name="myreviews">Reviews</string>
+    <string name="dummy">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
+    <string name="orderstatus">Order Status</string>
+    <string name="delete">DELETE</string>
+    <string name="savedaddress">Saved Addresses</string>
+
+
+    <!-- Zahir's Project string................................................................................................................. -->
+
+    <string name="driver_id">Driver Id</string>
+    <string name="track_id">Track Id</string>
+    <string name="left_time">Left Time</string>
+    <string name="sender_address">Sender Address</string>
+    <string name="receiver_address">Receiver Address</string>
+    <string name="package_details">Package Details</string>
+    <string name="package_picked">Package Picked</string>
+    <string name="travelling_on_a_route">Travelling on a Route</string>
+    <string name="delivered">Delivered</string>
+    <string name="customer_care">CUSTOMER CARE</string>
+    <string name="customer_care_title">Customer Care</string>
+    <string name="cancel_order">CANCEL ORDER</string>
+    <string name="select_problem_type">Select Problem Type</string>
+    <string name="describe_problem">Describe Problem</string>
+    <string name="attach_photo">Attach Photo</string>
+    <string name="optional">(Optional)</string>
+    <string name="upload">Upload</string>
+    <string name="send">Send</string>
+    <string name="invite_friends_for_points">Invite your frinds to get free 30 points</string>
+    <string name="invite_friends_on_meebu">Invite frinds on meebu and after they join, both of you will get 30 points which is redeemable on everything.</string>
+    <string name="tap_to_copy">Tap on invitation code to copy</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="about_driver_found">About driver found</string>
+    <string name="about_every_job_update">About every job update</string>
+    <string name="about_start_reach_delivered">Notification when job started, about to reach, delivered.</string>
+    <string name="about_app_updates">About app updates</string>
+    <string name="about_wallet_activities">About wallet activities</string>
+    <string name="about_customer_query_solution">About customer query solution</string>
+    <string name="about_friend_joined">About friend joined</string>
+    <string name="full_name">Full Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="age">Age</string>
+    <string name="gender">Gender</string>
+    <string name="save">Save</string>
+    <string name="enter_current_password">Enter Current Password</string>
+    <string name="enter_new_email_address">Enter New Email Address</string>
+    <string name="submit">Submit</string>
+    <string name="received_code_via_email">Please enter 4 digit verification code that you received via  Email Address.</string>
+    <string name="resend_otp"><u>Resend OTP</u></string>
+    <string name="enter_new_password">Enter New Password</string>
+    <string name="re_enter_new_password">Re-Enter New Password</string>
+    <string name="enter_new_phone">Enter New Phone Number</string>
+    <string name="received_code_via_mobile_sms">Please enter 4 digit verification code that you received via  Mobile SMS.</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="change_email_address">Change Email Address</string>
+    <string name="change_password">Change Password</string>
+    <string name="change_mobile_number">Change Mobile Number</string>
+    <string name="verify_aadhar_card">Verify Aadhar Card</string>
+    <string name="invite_a_friend">Invite a Friend</string>
+    <string name="running_order">Running Order</string>
+    <string name="aadhar_front">Aadhar Card\n Front Photo</string>
+    <string name="aadhar_back">Aadhar Card\n Back Photo</string>
+    <string name="pan_card_photo">Pan Card Photo</string>
+    <string name="Password_doesnt_match">Password doesn\'t match</string>
+    <string name="Please_Enter_Valid_Email">Please enter valid email.</string>
+    <string name="Please_enter_email">Please enter email</string>
+    <string name="Please_enter_fullname">Please enter full name</string>
+    <string name="Please_Enter_Password">Please enter password</string>
+    <string name="verify_pan_card">Verify Pan Card</string>
+    <string name="lorem_ipsum_large">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. \\n\\n Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. \\n\\n\\n Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+
+
+    <!-- ......................................................................................................................................  -->
+    <string-array name="labels">
+        <item>Pickup Address Details</item>
+        <item>Delivery Address Details</item>
+        <item>Package Details</item>
+
+    </string-array>
+    <string name="title_activity_rewards">RewardsActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="rewards">Rewards</string>
+    <string name="scratch_card">SCRATCH\n REWARDS\n CARDS</string>
+    <string name="add_new_address">Add New Address</string>
 
 </resources>

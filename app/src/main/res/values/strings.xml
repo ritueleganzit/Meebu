@@ -235,5 +235,11 @@
     <string name="rewards">Rewards</string>
     <string name="scratch_card">SCRATCH\n REWARDS\n CARDS</string>
     <string name="add_new_address">Add New Address</string>
+    <string name="city">City*</string>
+    <string name="Please_enter_mobile">Please Enter Mobile Number</string>
+    <string name="Please_enter_country">Country cannot be empty</string>
+    <string name="Please_enter_state">State cannot be empty</string>
+    <string name="Please_enter_city">City cannot be empty</string>
+    <string name="Please_enter_address">Please Enter Address</string>
 
 </resources>

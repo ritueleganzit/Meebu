@@ -1,6 +1,7 @@
 package com.meebu;
 
 import android.content.IntentFilter;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -51,7 +52,8 @@ public abstract class BaseActivity extends AppCompatActivity implements NetworkS
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        unregisterReceiver(mNetworkStateReceiver);
+       // unregisterReceiver(mNetworkStateReceiver);
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(mNetworkStateReceiver);
     }
 
 }

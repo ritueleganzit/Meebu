@@ -4,12 +4,15 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Build;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -32,6 +35,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -48,6 +52,12 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.meebu.utils.SessionManager;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
 
 
 public class FullscreenActivity extends AppCompatActivity  implements OnMapReadyCallback {
@@ -60,10 +70,14 @@ public class FullscreenActivity extends AppCompatActivity  implements OnMapReady
     LinearLayout fab_layout;
     int finalHeight, finalWidth;
     private ViewGroup infoWindow;
+    ProgressDialog progressDialog;
     private TextView infoSnippet;
     private OnInfoWindowElemTouchListener infoButtonListener;
     MapWrapperLayout mapWrapperLayout;
     GoogleMap googleMap;
+    private String result="",city="",country="",state="";
+    private String address="",postalCode="",knownName="",latitude="",longitude="";
+    SessionManager sessionManager;
 
     public static float convertPixelsToDp(float px, Context context){
         return px / ((float) context.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT);
@@ -75,7 +89,12 @@ public class FullscreenActivity extends AppCompatActivity  implements OnMapReady
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_fullscreen);
+        sessionManager=new SessionManager(FullscreenActivity.this);
 
+        HashMap<String,String> hashMap=sessionManager.getUserDetails();
+progressDialog=new ProgressDialog(this);
+progressDialog.setMessage("Please Wait");
+progressDialog.setCanceledOnTouchOutside(false);
         mapView= (MapView) findViewById(R.id.mapView);
         overlay= findViewById(R.id.overlay);
         ed_pickup= findViewById(R.id.ed_pickup);
@@ -90,7 +109,15 @@ public class FullscreenActivity extends AppCompatActivity  implements OnMapReady
         bt_continue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(FullscreenActivity.this,SendPackageActivity.class));
+                startActivity(new Intent(FullscreenActivity.this,SendPackageActivity.class)
+                .putExtra("address",""+address)
+                .putExtra("city",""+city)
+                .putExtra("state",""+state)
+                .putExtra("country",""+country)
+                .putExtra("postalCode",""+postalCode)
+                .putExtra("knownName",""+knownName)
+                .putExtra("lat",latitude)
+                .putExtra("lng",longitude));
                 overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
 
             }
@@ -299,7 +326,7 @@ back.setOnClickListener(new View.OnClickListener() {
         MapsInitializer.initialize(getApplicationContext());
 
         googleMap.getUiSettings().setAllGesturesEnabled(false);
-        googleMap.getUiSettings().setZoomGesturesEnabled(false);
+        googleMap.getUiSettings().setZoomGesturesEnabled(true);
 
         LatLng loc2=new LatLng(23.0262,72.5242);
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(loc2));
@@ -317,6 +344,12 @@ back.setOnClickListener(new View.OnClickListener() {
                             .position(latLng)
                             .title("40 13 St-Washington - United States of America")
                             .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_pin)));
+                    progressDialog.show();
+
+                    latitude=""+latLng.latitude;
+                    longitude=""+latLng.longitude;
+
+                    getAddress(latLng.latitude,latLng.longitude);
                 }
 
             }
@@ -343,7 +376,50 @@ back.setOnClickListener(new View.OnClickListener() {
         });
 
     }
+    public void getAddress(final double latitude, final double longitude)
+    {
 
+        Log.d("hkhkh","called");
+        try {
+
+
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        final Geocoder geocoder;
+                        List<Address> addresses;
+                        geocoder = new Geocoder(getApplicationContext(), Locale.getDefault());
+                        if(geocoder.isPresent()) {
+                            addresses = geocoder.getFromLocation(latitude, longitude, 1); // Here 1 represent max location result to returned, by documents it recommended 1 to 5
+                            address = addresses.get(0).getAddressLine(0); // If any additional address line present than only, check with max available address lines by getMaxAddressLineIndex()
+                            city = addresses.get(0).getLocality();
+                            state = addresses.get(0).getAdminArea();
+                            country = addresses.get(0).getCountryName();
+                            postalCode = addresses.get(0).getPostalCode();
+                            knownName = addresses.get(0).getFeatureName(); // Only if a
+
+                            Toast.makeText(getApplicationContext(), "" + address, Toast.LENGTH_SHORT).show();
+
+                            result = address;
+
+                            Log.d("Addressss", "" + city);
+                            Log.d("Addressss", "" + state);
+                            Log.d("Addressss", "" + country);
+                            Log.d("Addressss", "" + postalCode);
+                            Log.d("Addressss", "" + knownName);
+                            progressDialog.dismiss();
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+            }, 2000);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     @Override
     public void onBackPressed() {
         Log.d("backkkkk",""+overlay.getAlpha());

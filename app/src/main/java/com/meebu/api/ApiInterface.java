@@ -51,6 +51,39 @@ public interface ApiInterface {
             Callback<Response> callback
     );
 
+
+@FormUrlEncoded
+    @POST("/pickuplocation")
+    public void pickupLocation(
+            @Field("user_id") String user_id,
+            @Field("p_lat") String p_lat,
+            @Field("p_long") String p_long ,
+            @Field("fullname") String fullname ,
+            @Field("mobile") String mobile ,
+            @Field("country") String country ,
+            @Field("state") String state ,
+            @Field("city") String city ,
+            @Field("landmark") String landmark ,
+            @Field("address") String address ,
+            Callback<Response> callback
+    );
+
+@FormUrlEncoded
+    @POST("/destinationlocation")
+    public void destinationLocation(
+            @Field("id") String user_id,
+            @Field("d_lat") String p_lat,
+            @Field("d_long") String p_long ,
+            @Field("fullname") String fullname ,
+            @Field("mobile") String mobile ,
+            @Field("country") String country ,
+            @Field("state") String state ,
+            @Field("city") String city ,
+            @Field("landmark") String landmark ,
+            @Field("address") String address ,
+            Callback<Response> callback
+    );
+
 @FormUrlEncoded
     @POST("/forgetpassword")
     public void forgotPassword(

@@ -99,7 +99,8 @@ sessionManager=new SessionManager(SignupScreen.this);
                     if (stringBuilder != null || !(stringBuilder.toString().equalsIgnoreCase(""))) {
 
 
-progressDialog.dismiss();                        JSONObject jsonObject=new JSONObject(""+stringBuilder);
+progressDialog.dismiss();
+JSONObject jsonObject=new JSONObject(""+stringBuilder);
                         if (jsonObject.getString("status").equalsIgnoreCase("1"))
 
                         {

@@ -3,6 +3,7 @@ package com.meebu;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -43,6 +44,8 @@ public class MobileSignUpActivity extends AppCompatActivity {
         progressDialog=new ProgressDialog(this);
 progressDialog.setMessage("Please Wait");
 
+
+
         binding.txtSignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,6 +83,7 @@ progressDialog.setMessage("Please Wait");
         overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
 
     }
+
 
     private void createUser(final String str) {
         progressDialog.show();
@@ -137,6 +141,7 @@ progressDialog.setMessage("Please Wait");
             @Override
             public void failure(RetrofitError error) {
                 progressDialog.dismiss();
+                Toast.makeText(MobileSignUpActivity.this, ""+error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
 

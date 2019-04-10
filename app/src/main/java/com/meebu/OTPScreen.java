@@ -45,6 +45,7 @@ public class OTPScreen extends AppCompatActivity {
 
 
 
+
         binding.lincontinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,6 +56,7 @@ public class OTPScreen extends AppCompatActivity {
 
             }
         });
+
         /*linsignup=findViewById(R.id.linsignup);
         timer=findViewById(R.id.timer);
         hide=findViewById(R.id.hide);

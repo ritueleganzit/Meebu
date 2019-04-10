@@ -241,5 +241,6 @@
     <string name="Please_enter_state">State cannot be empty</string>
     <string name="Please_enter_city">City cannot be empty</string>
     <string name="Please_enter_address">Please Enter Address</string>
+    <string name="package_id">Package Id</string>
 
 </resources>

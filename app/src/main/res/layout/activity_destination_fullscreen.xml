@@ -73,6 +73,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
+                android:singleLine="true"
                 android:elevation="6dp"
                 android:textCursorDrawable="@null"
                 android:drawablePadding="5dp"
@@ -115,7 +116,25 @@
                     android:textColor="#ffffff"/>
 
             </LinearLayout>
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_places"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ed_pickup"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@android:drawable/dialog_holo_light_frame"
+                android:visibility="gone"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="6dp"
+                app:cardMaxElevation="5dp">
 
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rc_places"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            </android.support.v7.widget.CardView>
             <Button
                 android:id="@+id/bt_continue"
                 android:layout_width="match_parent"

@@ -123,6 +123,7 @@ public class DialogActivity extends AppCompatActivity {
         // dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
 
         //image_foreground.setImageResource(rewardsData.getBackgroundId());
+
         dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation_2; //style id
         dialog.show();
 

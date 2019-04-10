@@ -3,6 +3,7 @@ package com.meebu;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -31,6 +32,8 @@ public class VerificationCodeActivity extends AppCompatActivity {
     private String TAG="OTPSCreen";
     ProgressDialog progressDialog;
     String mobile="";
+    int time=30;
+
     ActivityVerificationCodeBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +52,40 @@ public class VerificationCodeActivity extends AppCompatActivity {
 
             }
         });
+        binding.hide.setVisibility(View.GONE);
+        binding.hide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                binding.hide.setVisibility(View.GONE);
+                 time=30;
+                new CountDownTimer(30000, 1000) {
+
+                    public void onTick(long millisUntilFinished) {
+                        binding.timer.setText("0:"+checkDigit(time));
+                        time--;
+                    }
+
+                    public void onFinish() {
+                        binding.timer.setText("");
+                        binding.hide.setVisibility(View.VISIBLE);
+                    }
+
+                }.start();
+            }
+        });
+        new CountDownTimer(30000, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+                binding.timer.setText("0:"+checkDigit(time));
+                time--;
+            }
+
+            public void onFinish() {
+                binding.timer.setText("");
+                binding.hide.setVisibility(View.VISIBLE);
+            }
+
+        }.start();
         binding.verifySignupContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,6 +116,9 @@ public class VerificationCodeActivity extends AppCompatActivity {
         super.onBackPressed();
         overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
 
+    }
+    public String checkDigit(int number) {
+        return number <= 9 ? "0" + number : String.valueOf(number);
     }
 
     public void verifyCode(String pin)

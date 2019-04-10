@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="280dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        app:cardElevation="8dp"
+        android:outlineProvider="bounds"
+        android:paddingTop="4dp"
+        android:layout_marginTop="4dp"
+        app:cardCornerRadius="8dp"
+        android:layout_marginBottom="-8dp"
+        android:layout_marginRight="10dp">
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:fillViewport="true"
+            android:fitsSystemWindows="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/left"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/right"
+                        android:layout_alignParentLeft="true"
+                        android:orientation="vertical">
+
+                        <TableLayout
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content">
+
+
+                            <TableRow
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                    android:textColor="#555d70"
+                                    android:fontFamily="@font/sourcesanspro_semibold"
+                                    android:text="@string/package_id"/>
+                                <TextView
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                    android:textColor="#555d70"
+                                    android:fontFamily="@font/sourcesanspro_semibold"
+                                    android:text=" : "/>
+                                <TextView
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                    android:textColor="#555d70"
+                                    android:fontFamily="@font/sourcesanspro_semibold"
+                                    android:singleLine="true"
+                                    android:ellipsize="end"
+                                    android:id="@+id/orderdetail_package_id"
+                                    android:text="45217"/>
+
+                            </TableRow>
+
+
+
+                        </TableLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="13dp"
+                                android:layout_height="13dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/blue_dot"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#555d70"
+                                android:id="@+id/orderdetail_sender_address"
+                                android:fontFamily="@font/sourcesanspro_semibold"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:text="@string/sender_address"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="13dp"
+                                android:layout_height="13dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/green_dot"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#555d70"
+                                android:fontFamily="@font/sourcesanspro_semibold"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:id="@+id/orderdetail_receiver_address"
+                                android:gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:text="@string/receiver_address"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12sp"
+                                android:textColor="#555d70"
+                                android:fontFamily="@font/sourcesanspro_semibold"
+                                android:text="@string/package_details"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12sp"
+                                android:textColor="#555d70"
+                                android:fontFamily="@font/sourcesanspro_semibold"
+                                android:text=" : "/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12sp"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:id="@+id/orderdetail_packageweight"
+                                android:textColor="#555d70"
+                                android:fontFamily="@font/sourcesanspro_semibold"
+                                android:text="4kg package"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_alignParentRight="true">
+
+
+
+
+                        <ImageView
+                            android:scaleType="centerCrop"
+                                android:id="@+id/orderdetail_packageimage"
+                            android:layout_width="80dp"
+                            android:adjustViewBounds="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_height="80dp"
+                            android:src="@mipmap/box"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/customer_care"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/customer_service_small"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:layout_margin="5dp"
+                            android:text="@string/customer_care"
+                            android:textColor="#666281"
+                            android:fontFamily="@font/sourcesanspro_semibold"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/cancel_order"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/cancel_small"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:layout_margin="5dp"
+                            android:text="@string/delete"
+                            android:textColor="#666281"
+                            android:fontFamily="@font/sourcesanspro_semibold"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

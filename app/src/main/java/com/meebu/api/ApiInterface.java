@@ -4,7 +4,10 @@ import retrofit.Callback;
 import retrofit.client.Response;
 import retrofit.http.Field;
 import retrofit.http.FormUrlEncoded;
+import retrofit.http.Multipart;
 import retrofit.http.POST;
+import retrofit.http.Part;
+import retrofit.mime.TypedFile;
 
 /**
  * Created by eleganz on 1/11/18.
@@ -67,6 +70,22 @@ public interface ApiInterface {
             @Field("address") String address ,
             Callback<Response> callback
     );
+
+
+@Multipart
+@POST("/package_order")
+public void package_order(@Part("id") String id,
+                          @Part("unit") String unit,
+                          @Part("length") String length,
+                          @Part("width") String width,
+                          @Part("height") String height,
+                          @Part("weight") String weight,
+                          @Part("mode_of_transportation") String mode_of_transportation,
+                          @Part("price") String price,
+                          @Part("image") TypedFile image,
+                            Callback<Response> callback);
+
+
 
 @FormUrlEncoded
     @POST("/destinationlocation")

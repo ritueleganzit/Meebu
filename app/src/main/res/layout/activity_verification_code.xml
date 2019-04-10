@@ -86,7 +86,22 @@
                         app:digitElevation="5dp"
                         app:digitBackground="@drawable/pin_bg"/>
 
-
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="00:00"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:textColor="#ffffff"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/timer"/>
+                    <TextView
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:layout_width="wrap_content"
+                        android:text="@string/resend_otp"
+                        android:textColor="#ffffff"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/hide"/>
                     <LinearLayout
                         android:id="@+id/lin1"
                         android:layout_width="match_parent"

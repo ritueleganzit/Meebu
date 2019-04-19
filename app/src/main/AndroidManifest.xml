@@ -152,6 +152,9 @@
             android:name=".OrderDetailActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".SaveAddressActivity"></activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="fca196d6356b0be62d0f468b051791d48bce772f" />
     </application>
 
 </manifest>

@@ -60,6 +60,9 @@
 
 
     <ScrollView
+        android:focusedByDefault="true"
+        android:descendantFocusability="beforeDescendants"
+
         android:layout_width="match_parent"
         android:fillViewport="true"
         android:focusableInTouchMode="true"
@@ -470,6 +473,7 @@ android:id="@+id/rb_cm"
 
 
                 <CheckBox
+                    android:fontFamily="@font/sourcesanspro_regular"
                     android:theme="@style/CheckboxTheme"
                     android:layout_width="match_parent"
                     android:textColor="@color/black_overlay"
@@ -477,6 +481,19 @@ android:id="@+id/rb_cm"
                     android:text="Save Address"/>
 
                 <EditText
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/state"
+                    android:id="@+id/pick_state"
+                    android:inputType="text"
+                    android:focusable="false"
+                    android:drawableLeft="@drawable/ic_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+                <EditText
+                    android:visibility="gone"
+                    android:fontFamily="@font/sourcesanspro_regular"
                     android:id="@+id/pick_fullname"
                     android:inputType="textPersonName"
                     android:hint="@string/fullname"
@@ -488,6 +505,7 @@ android:id="@+id/rb_cm"
                     />
 
                 <EditText
+                    android:fontFamily="@font/sourcesanspro_regular"
                     android:id="@+id/pick_mobile"
                     android:inputType="phone"
                     android:layout_marginTop="10dp"
@@ -497,27 +515,42 @@ android:id="@+id/rb_cm"
                     android:layout_height="wrap_content"
                     />
                 <EditText
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/landmark"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:inputType="text"
+                    android:id="@+id/pick_landmark"
+                    android:drawableLeft="@drawable/ic_map_pin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <EditText
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:inputType="phone"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/altmobilenumber"
+                    android:drawableLeft="@drawable/ic_mobile_light"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+                <EditText
+                    android:fontFamily="@font/sourcesanspro_regular"
                     android:id="@+id/pick_country"
                     android:layout_marginTop="10dp"
                     android:hint="@string/country"
+                    android:visibility="gone"
                     android:focusable="false"
                     android:inputType="text"
                     android:drawableLeft="@drawable/ic_country"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     />
-                <EditText
-                    android:layout_marginTop="10dp"
-                    android:hint="@string/state"
-                    android:id="@+id/pick_state"
-                    android:inputType="text"
-                    android:focusable="false"
-                    android:drawableLeft="@drawable/ic_state"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    /><EditText
+               <EditText
+                   android:visibility="gone"
                     android:layout_marginTop="10dp"
                     android:hint="@string/city"
+                android:fontFamily="@font/sourcesanspro_regular"
                     android:id="@+id/pick_city"
                     android:inputType="text"
                 android:focusable="false"
@@ -528,14 +561,17 @@ android:id="@+id/rb_cm"
                 <EditText
                     android:layout_marginTop="10dp"
                     android:hint="@string/landmark"
+                    android:fontFamily="@font/sourcesanspro_regular"
                     android:inputType="text"
-                    android:id="@+id/pick_landmark"
+android:visibility="gone"
                     android:drawableLeft="@drawable/ic_map_pin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     />
 
                 <EditText
+                    android:visibility="gone"
+                    android:fontFamily="@font/sourcesanspro_regular"
                     android:inputType="text"
                     android:id="@+id/pick_fulladdress"
                     android:layout_marginTop="10dp"
@@ -569,6 +605,8 @@ android:id="@+id/rb_cm"
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/delivery"
+
+
                 android:visibility="gone"
 
                 android:layout_margin="10dp"
@@ -579,6 +617,7 @@ android:id="@+id/rb_cm"
 
 
                 <CheckBox
+                    android:fontFamily="@font/sourcesanspro_regular"
                     android:theme="@style/CheckboxTheme"
                     android:layout_width="match_parent"
                     android:textColor="@color/black_overlay"
@@ -586,6 +625,7 @@ android:id="@+id/rb_cm"
                     android:text="Save Address"/>
 
                 <EditText
+                    android:fontFamily="@font/sourcesanspro_regular"
                     android:id="@+id/rec_name"
                     android:hint="@string/receivername"
                     android:layout_marginTop="10dp"
@@ -595,6 +635,8 @@ android:id="@+id/rb_cm"
                     />
 
                 <EditText
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:inputType="phone"
                     android:id="@+id/rec_mobile"
                     android:layout_marginTop="10dp"
                     android:hint="@string/mobilenumber"
@@ -603,26 +645,34 @@ android:id="@+id/rb_cm"
                     android:layout_height="wrap_content"
                     />
                 <EditText
+                    android:fontFamily="@font/sourcesanspro_regular"
                     android:id="@+id/rec_country"
                     android:layout_marginTop="10dp"
                     android:hint="@string/country"
+                    android:visibility="gone"
+                    android:inputType="text"
                     android:drawableLeft="@drawable/ic_country"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     />
                 <EditText
+                    android:fontFamily="@font/sourcesanspro_regular"
                     android:id="@+id/rec_state"
                     android:layout_marginTop="10dp"
                     android:hint="@string/state"
+                    android:inputType="text"
+                    android:visibility="gone"
                     android:drawableLeft="@drawable/ic_state"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     />
                 <EditText
+                    android:fontFamily="@font/sourcesanspro_regular"
                     android:layout_marginTop="10dp"
                     android:hint="@string/city"
                     android:id="@+id/rec_city"
                     android:inputType="text"
+                    android:visibility="gone"
                     android:focusable="false"
                     android:drawableLeft="@drawable/ic_city"
                     android:layout_width="match_parent"
@@ -640,8 +690,8 @@ android:id="@+id/rb_cm"
                 <EditText
                     android:id="@+id/rec_address"
                     android:layout_marginTop="10dp"
-                    android:hint="@string/fulladdress"
-                    android:drawableLeft="@drawable/ic_loc"
+                    android:hint="@string/altmobilenumber"
+                    android:drawableLeft="@drawable/ic_mobile_light"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     />

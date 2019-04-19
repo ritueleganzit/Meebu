@@ -120,9 +120,9 @@ binding.packagePlane.setOnClickListener(new View.OnClickListener() {
         binding.sendPackage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                binding.pickup.setVisibility(View.GONE);
+                /*binding.pickup.setVisibility(View.GONE);
                 binding.delivery.setVisibility(View.VISIBLE);
-binding.progressViewpackage.setImageResource(R.drawable.delivery_address);
+binding.progressViewpackage.setImageResource(R.drawable.delivery_address);*/
                 if (isValid())
 
                 {
@@ -133,8 +133,11 @@ binding.progressViewpackage.setImageResource(R.drawable.delivery_address);
         binding.deliverySubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                binding.pickup.setVisibility(View.GONE);
+                binding.progressViewpackage.setImageResource(R.drawable.package_detail);
+
                 binding.delivery.setVisibility(View.GONE);
+                binding.pickup.setVisibility(View.GONE);
+                binding.packagedetail.setVisibility(View.VISIBLE);
 
                 if (isValiddes())
                 {
@@ -153,7 +156,7 @@ binding.packageImage.setOnClickListener(new View.OnClickListener() {
 });
         binding.pickCountry.setText(""+country);
         binding.pickFulladdress.setText(""+address);
-        binding.pickState.setText(""+state);
+        binding.pickState.setText(""+address);
         binding.pickCity.setText(""+city);
 
         binding.recCountry.setText(""+country);
@@ -263,7 +266,7 @@ binding.confirmOrder.setOnClickListener(new View.OnClickListener() {
 
                 Glide.with(SendPackageActivity.this)
                         .load(""+mediapath.trim())
-                        .centerCrop()
+
 
                         .into(binding.packageSetimg);
 Log.d("sdadad",""+mediapath);            }
@@ -276,18 +279,22 @@ Log.d("sdadad",""+mediapath);            }
     @Override
     public void onBackPressed() {
 
-        if (binding.delivery.getVisibility()==View.VISIBLE)
-        {
-            binding.delivery.setVisibility(View.GONE);
-            binding.progressViewpackage.setImageResource(R.drawable.pickup_delivery);
-
-            binding.pickup.setVisibility(View.VISIBLE);
-        }
-        else if (binding.packagedetail.getVisibility()==View.VISIBLE)
+        if (binding.packagedetail.getVisibility()==View.VISIBLE)
         {
             binding.packagedetail.setVisibility(View.GONE);
             binding.delivery.setVisibility(View.VISIBLE);
+            binding.pickup.setVisibility(View.GONE);
             binding.progressViewpackage.setImageResource(R.drawable.delivery_address);
+        }
+
+
+        else if (binding.delivery.getVisibility()==View.VISIBLE)
+        {
+            binding.delivery.setVisibility(View.GONE);
+            binding.packagedetail.setVisibility(View.GONE);
+            binding.progressViewpackage.setImageResource(R.drawable.pickup_delivery);
+
+            binding.pickup.setVisibility(View.VISIBLE);
         }
         else {
             super.onBackPressed();
@@ -297,9 +304,9 @@ Log.d("sdadad",""+mediapath);            }
 
     public void addPackageDetail()
     {
-        final StringBuilder stringBuilder=new StringBuilder();
-        RestAdapter restAdapter = new RestAdapter.Builder().setEndpoint(BASEURL).build();
-        final ApiInterface apiInterface = restAdapter.create(ApiInterface.class);
+            final StringBuilder stringBuilder=new StringBuilder();
+            RestAdapter restAdapter = new RestAdapter.Builder().setEndpoint(BASEURL).build();
+            final ApiInterface apiInterface = restAdapter.create(ApiInterface.class);
 
         TypedFile typedFile=new TypedFile("multipart/form-data",new File(mediapath.trim()));
         apiInterface.package_order(package_id, unit, binding.packageLength.getText().toString(), binding.packageWidth.getText().toString(), binding.packageHeight.getText().toString()
@@ -444,11 +451,7 @@ Log.d("sdadad",""+mediapath);            }
 
                             JSONObject jsonObject1=jsonObject.getJSONObject("data");
 
-                            binding.progressViewpackage.setImageResource(R.drawable.package_detail);
 
-                            binding.delivery.setVisibility(View.GONE);
-                            binding.pickup.setVisibility(View.GONE);
-                            binding.packagedetail.setVisibility(View.VISIBLE);
 
                         }
                     }

@@ -56,10 +56,11 @@
     <string name="myprofile">My Profile</string>
     <string name="sendpackage">Send Package</string>
     <string name="fullname">Full Name*</string>
-    <string name="mobilenumber">Mobile Number*</string>
+    <string name="mobilenumber">Phone Number <font color='red'>*</font></string>
+    <string name="altmobilenumber">Alternate Phone Number</string>
     <string name="country">Country*</string>
-    <string name="state">State*</string>
-    <string name="landmark">Landmark</string>
+    <string name="state">Pickup Address*</string>
+    <string name="landmark">Nearby Landmark</string>
     <string name="fulladdress">Full Address*</string>
     <string name="receivername">Receiver Name</string>
     <string name="myreviews">Reviews</string>

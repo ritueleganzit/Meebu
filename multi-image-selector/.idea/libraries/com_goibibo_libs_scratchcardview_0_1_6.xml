@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.goibibo.libs:scratchcardview-0.1.6">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/scratchcardview-0.1.6.aar/835f097e9750c1f57b5a998f736d7bbd/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/scratchcardview-0.1.6.aar/835f097e9750c1f57b5a998f736d7bbd/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.goibibo.libs/scratchcardview/0.1.6/9c16a1b79253e518218896d0b2fd9d2b3fa8f7dc/scratchcardview-0.1.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

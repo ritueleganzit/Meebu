@@ -55,7 +55,7 @@ public class OrderDetailActivity extends AppCompatActivity implements OnMapReady
         orderdetail_packageweight.setText(""+weight+" kg");
         Glide.with(OrderDetailActivity.this)
                 .load(image)
-                .placeholder(R.mipmap.box)
+
                 .into(orderdetail_packageimage);
 
 
@@ -77,7 +77,6 @@ public class OrderDetailActivity extends AppCompatActivity implements OnMapReady
 
                 Glide.with(OrderDetailActivity.this)
                         .load(image)
-                        .placeholder(R.mipmap.box)
                         .into(imageView);
                 dialog.getWindow().setDimAmount(0.6f);
 
